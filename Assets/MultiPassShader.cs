@@ -25,6 +25,8 @@ namespace XJ.Unity3D.ImageEffects
 
             Graphics.Blit(source, renderTexture, base.Material, 0);
             Graphics.Blit(renderTexture, null, base.Material, 1);
+
+            RenderTexture.ReleaseTemporary(renderTexture);
         }
     }
 }
